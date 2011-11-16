@@ -5,7 +5,7 @@
 \usepackage{amsmath, amsthm, amssymb}
 \usepackage{hyperref}
 \usepackage{graphicx}
-\usepackage[margin=2.5cm]{geometry}
+\usepackage[margin=2cm]{geometry}
 
 \begin{document}
 
@@ -14,7 +14,7 @@
 \section{Relacja klasyfikacji}
 Jako $D$ oznaczamy pewien skończony zbiór obiektów. W tym zbiorze wprowadzimy dwuargumentową relację $R$. Relacja $R$ nazywana jest relacją klasyfikacji, jeśli spełnia dwa warunki:
 \begin{enumerate}
- \item Relacja $R$ dzieli zbiór $D$ na podzbiory $D_i$ tak, że każdy dowolony element $D$ należy do jednego podzbioru $D_i$:
+ \item Relacja $R$ dzieli zbiór $D$ na podzbiory $D_i$ tak, że każdy dowolny element $D$ należy do jednego podzbioru $D_i$:
 \begin {equation}
  \displaystyle\mathop{\forall}_{x \in D} \mathop{\exists}_i x \in D_i
 \end {equation}
@@ -27,6 +27,8 @@ Jako $D$ oznaczamy pewien skończony zbiór obiektów. W tym zbiorze wprowadzimy
 \end{equation}
 \end{enumerate}
 
+Interesują nas takie relacje, które generują skończoną liczbę klas (relacja ta jedynie dzieli zbiór obiektów na podzbiory, ale nie przypisuje im etykiet).
+
 \section{Zadanie rozpoznawania. Elementy składowe rozpoznawania}
 \subsection{Zadanie rozpoznawania}
 Celem zadania rozpoznawania jest zbudowanie algorytmu $A$ realizującego odwzorowanie (klasyfikację + przypisanie etykiet):
@@ -36,8 +38,6 @@ Celem zadania rozpoznawania jest zbudowanie algorytmu $A$ realizującego odwzoro
 który przypisuje do każdego elementu zbioru $D$ etykietę (numer klasy) należącą do zbioru $I \cup \{i_{\emptyset}\}$, gdzie $i_{\emptyset}$ jest odpowiedzią ,,nie wiem''. Dobry algorytm charakteryzuje się małą liczbą odpowiedzi ,,nie wiem''.
 
 Dopuszczalny jest wariant, w którym identyfikujemy czy obiekt należy do sumy niektórych podzbiorów, np. $p \in D_1 \cup D_2$
-
-Interesują nas takie relacje, które generują skończoną liczbę klas (relacja ta jedynie dzieli zbiór obiektów na podzbiory, ale nie przypisuje im etykiet).
 
 \subsection{Elementy składowe rozpoznawania}
 Odwzorowanie $A$ jest realizowane jako złożenie trzech odwzorowań
