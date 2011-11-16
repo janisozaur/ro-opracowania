@@ -176,14 +176,14 @@ Naprostszym rozwiązaniem tego problemu jest zwiększenie ilości wzorców poprz
 \section{Metoda wzorców. Wzorzec uogólniony.}
 Należy określić jeden element klasy, który będzie wzorcowy. 
 \begin{equation}
-  \overrightarrow{m_1} = \frac{1}{I_i} \sum_{k=1}^{L_i} \overrightarrow{x^{i,k}}
+  \overrightarrow{m_i} = \frac{1}{I_i} \sum_{k=1}^{L_i} \overrightarrow{x^{i,k}}
 \end{equation}
 
 Fizyczną interpretacją średniej arytmetycznej jest środek ciężkości.
 \begin{equation}
  C^i(\overrightarrow{a}) = 
-\begin{cases} 1 & \mbox{gdy }\overrightarrow{a} = \{w_i\}\\
- 0 & \mbox{gdy }\overrightarrow{a} \neq \{w_i\}
+\begin{cases} 1 & \mbox{gdy }\overrightarrow{a} = \{m_i\}\\
+ 0 & \mbox{gdy }\overrightarrow{a} \neq \{m_i\}
 \end{cases}
 \end{equation}
 I korzyści będzie z tego jeszcze mniej, bo liczba decyzji będzie gwałtownie rosła. Dlatego należy wprowadzić:
@@ -229,10 +229,15 @@ Wybór rodzaju funkcji IF należy wykonać arbitralnie.
 
 \section{Klasyfikacja. Metoda najmniejszych przedziałów}
 Załóżmy, że mamy dwie klasy, ich klasyfikacja opiera się tylko o jedną cechę:
+
 $w$ - wzrost
+
 klasy:
+
 $D_1$ - europejczycy
+
 $D_2$ - azjaci
+
 dla każdej klasy na osi zaznaczamy wszystkie obiekty \ref{fig:min_dist}
 \begin{figure}[h]
   \centering
@@ -247,7 +252,7 @@ W przypadku gdy obiekt jest w $R^2$ metoda najmniejszych przedziałów staje si�
 \section{Klasyfikacja. Metoda naiwnego klasyfikatora Bayesa.}
 Ogólnie:
 \begin{equation}
-c^i(\overrightarrow{w})=P_{D_i}(w)=P(\overrightarrow{w}|D_i)
+C^i(\overrightarrow{w})=P_{D_i}(w)=P(\overrightarrow{w}|D_i)
 \end{equation}
 Wadą tego wzoru jest, że nie bierzemy pod uwagę prawdopodobieństwa wystąpienia klasy $D_i$, które to prawdopodobieństwo w przypadku skończonego ciągu uczącego obliczone jest bardzo prosto:
 \begin{equation}
@@ -256,7 +261,7 @@ P(D_i)=\frac{|D_i|}{|D|}=\frac{\mbox{liczba elementów $D_i$}}{\mbox{ogólna lic
 
 Wtedy:
 \begin{equation}
-c^i(\overrightarrow{w})=P(\overrightarrow{w}|D_i)P(D_i), i=1,2,\ldots,L
+C^i(\overrightarrow{w})=P(\overrightarrow{w}|D_i)P(D_i),\; i=1,2,\ldots,L
 \end{equation}
 pod warunkiem, że elementy ciągu uczącego naprawdę zostały wybrane losowo.
 Ten wzór można zmodyfikować zakładając \textit{a priori} różne modele prawdopodobieństwo np. $P(D_i)$ = stała, $P(\overrightarrow{w}|D_i)$ są rozkładem normalnym
@@ -308,7 +313,7 @@ Niech dana będzie funkcja obiektu:
 \end{cases}
 \end{equation}
 
-Niech $M, N$, będą wymiarami obrazu oraz dany będzie współczynnik:
+Niech $M$, $N$, będą wymiarami obrazu oraz dany będzie współczynnik:
 \begin{equation}
   \mu_{00} = \sum_{i=1}^{M} \sum_{j=1}^{N} I(x_i, y_i)
 \end{equation}
@@ -343,7 +348,7 @@ Wykorzystanie momentów do obliczenia innych parametrów obiektu:
 
 \section{Momenty konturu.}
 Niech kontur obiektu składa się z $N$ pikseli. 
-Niech $d(i), i=1,2,\ldots,N$ będzie euklidesową odległością $i$-tego piksela od środka ciężkości obiektu.
+Niech $d(i),\; i=1,2,\ldots,N$ będzie euklidesową odległością $i$-tego piksela od środka ciężkości obiektu.
 
 \begin{enumerate}
 \item Jednowymiarowe momenty konturu rzędu $p$:
