@@ -130,7 +130,7 @@ Metryka $\varphi(w)$ w przestrzeni $X$ jest odwzorowaniem, które spełnia zało
 \end{equation}
 \subsection{Metryka uliczna/manhattan/taksówkarza}
 \begin{equation}
-  \varphi_U(\overrightarrow{x}, \overrightarrow{y}) = \sum_{i = 1}^n |x_i - y_i|^2
+  \varphi_U(\overrightarrow{x}, \overrightarrow{y}) = \sum_{i = 1}^n |x_i - y_i|
 \end{equation}
 \subsection{Metryka Pafnutija Lwowicza Czebyszewa}
 \begin{equation}
@@ -138,7 +138,7 @@ Metryka $\varphi(w)$ w przestrzeni $X$ jest odwzorowaniem, które spełnia zało
 \end{equation}
 \subsection{Metryka Minkowskiego}
 \begin{equation}
-  \varphi_M(\overrightarrow{x}, \overrightarrow{y}) = \left(\sqrt{\sum_{i = 1}^n |x_i - y_i|^p}\right)^{\frac{1}{p}}
+  \varphi_M(\overrightarrow{x}, \overrightarrow{y}) = \left({\sum_{i = 1}^n |x_i - y_i|^p}\right)^{\frac{1}{p}}
 \end{equation}
 Jeśli $p = 2$, to metryka przechodzi w metrykę euklidesową; jeśli $p = 1$ to metryka przechodzi w metrykę uliczną; jeśli $p \rightarrow \infty$, to metryka przechodzi w metrykę Pafnutija Lwowicza Czebyszewa.
 
@@ -273,7 +273,7 @@ Kroki:
 \begin{enumerate}
 \item Określić na ile grup $k$ powinien być podzielony zbiór obiektów $D$
 \item Losowo przypisz $k$-obiektów z $D$: $\overrightarrow{m_1}, \overrightarrow{m_2}, \overrightarrow{m_3}, \ldots, \overrightarrow{m_k}$ jako środki odpowiednio $D_1, D_2, D_3, \ldots, D_k$,
-\item Przypisz każdy z pozostalych obiektów do grupy z minimalną odległością do środka grupy
+\item Przypisz każdy z pozostałych obiektów do grupy z minimalną odległością do środka grupy
 \item Dla każdej grupy oblicz nową wartość centrum ciężkości (centroid)
 \begin{equation}
 \overrightarrow{m_i} = \frac{1}{I_i} \sum_{p=1}^{I_i} d_p^{(i)}
