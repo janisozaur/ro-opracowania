@@ -60,9 +60,7 @@ Odwzorowanie $A$ jest realizowane jako złożenie trzech odwzorowań
 \end{enumerate}
 
 \section{Recepcja cech. Zasada Brawermanna.}
-Recepcja jest to arbitralne przypisane obiektowi zestawu cech w postaci wektora $X = [x_1, x_2, x_3, \ldots, x_L]$, $X \in R^L$, gdzie $L$ jest liczbą parametrów. \ref{fig:brawermann}
-
-Obrazując, zasada Brawermanna mówi, że wartości $L_i$ należy maksymalizować, a $D_j$ minimalizować.
+Recepcja jest to arbitralne przypisane obiektowi zestawu cech w postaci wektora $X = [x_1, x_2, x_3, \ldots, x_L]$, $X \in R^L$, gdzie $L$ jest liczbą parametrów.
 
 \begin{figure}[ht]
   \centering
@@ -73,10 +71,10 @@ Obrazując, zasada Brawermanna mówi, że wartości $L_i$ należy maksymalizowa�
 
 Każda zmienna wektora może być zmienną liczbową lub jakościową. Trudność polega na takim doborze cech, by wybrać tylko te najistotniejsze, zazwyczaj opieramy się o wynik symulacji, wcześniejsze doświadczenia lub intuicję.
 
-Przy wyborze przestrzeni cech nalęzy kierować się zasadą Brawermanna, która mówi, że obiekty jednej klasy powinny w przestrzeni cech tworzyć skupiska możliwie maksymalnie zwarte wewnętrznie i możliwie najbardziej oddalone od podobnych skupisk dla innych klas.
+Przy wyborze przestrzeni cech należy kierować się zasadą Brawermanna, która mówi, że obiekty jednej klasy powinny w przestrzeni cech tworzyć skupiska możliwie maksymalnie zwarte wewnętrznie i możliwie najbardziej oddalone od podobnych skupisk dla innych klas. Obrazując (\ref{fig:brawermann}), zasada ta mówi, że wartości $L_i$ należy maksymalizować, a $D_j$ minimalizować.
 
 \section{Odwzorowanie: funkcja przynależności.}
-Realizacja odwzorowania $C$ polega na określeniu wartości podobieństwa pomiędzy rozpoznawanym obiektem $\overrightarrow{a}$ $(\overrightarrow{a} \in R^L)$ i obiektami z klasy $D_i: C^i(\overrightarrow{a})$. Dla obiektu $\overrightarrow{a}$ określamy jego podobieństwo do klasy $D_i = 1, 2, \ldots, I$
+Realizacja odwzorowania $C$ polega na określeniu wartości podobieństwa pomiędzy rozpoznawanym obiektem $\overrightarrow{a}$ $(\overrightarrow{a} \in R^L)$ i obiektami z klasy $D_i: C^i(\overrightarrow{a})$. Dla obiektu $\overrightarrow{a}$ określamy jego podobieństwo do klasy $D_i\; i = 1, 2, \ldots, I$
 
 $C^i(\overrightarrow{a})$ zależy od stosowanej metody.
 
@@ -219,9 +217,10 @@ Oznacza to, że odległość między punktem $\overrightarrow{x}$ i $\overrighta
 Taką nieliniowość wprowadzamy w celu nadania nieliniowo większej wagi obiektom znajdującym się bliżej obiektu ocenianego, ew. odwrotnie. Typową sytuacją korzystania z przestrzeni rozciągniętej jest sytuacja, kiedy skupiska tworzące klasy są blsko siebie. Należy wprowadzić taką miarę, żeby te skupiska rozciągnęła i oddaliła od siebie. Taka potrzeba np. zachodzi w metodach aproksymacyjnych w których zwykle od przestrzeni $R_n \rightarrow R_m$ i $m \ll n$\footnote{niech ktoś to zweryfikuje}, to znaczy w metodach istotnie redukujących wymiar przestrzeni cech.
 
 Funkcja potencjałowa
-Potencjał pomiędzy punktami $\overrightarrow{x}$ i $\overrightarrow{y}$ proporcjonalny jest do kwadratu odległości.
+
+Potencjał pomiędzy punktami $\overrightarrow{x}$ i $\overrightarrow{y}$ odwrotnie proporcjonalny jest do kwadratu odległości.
 \begin{equation}
-p = \frac{c}{l_2}
+p = \frac{c}{l^2}
 \end{equation}
 \begin{equation}
 \rho(\overrightarrow{a}, \overrightarrow{x}) \rightarrow \rho^2(\overrightarrow{a}, \overrightarrow{x}) \rightarrow f(\rho^2(\overrightarrow{a}, \overrightarrow{x}))
@@ -253,7 +252,7 @@ W przypadku gdy obiekt jest w $R^2$ metoda najmniejszych przedziałów staje si�
 \section{Klasyfikacja. Metoda naiwnego klasyfikatora Bayesa.}
 Ogólnie:
 \begin{equation}
-C^i(\overrightarrow{w})=P_{D_i}(w)=P(\overrightarrow{w}|D_i)
+C^i(\overrightarrow{w})=P_{D_i}(\overrightarrow{w})=P(\overrightarrow{w}|D_i)
 \end{equation}
 Wadą tego wzoru jest, że nie bierzemy pod uwagę prawdopodobieństwa wystąpienia klasy $D_i$, które to prawdopodobieństwo w przypadku skończonego ciągu uczącego obliczone jest bardzo prosto:
 \begin{equation}
