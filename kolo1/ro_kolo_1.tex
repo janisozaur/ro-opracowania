@@ -33,9 +33,7 @@ Celem zadania rozpoznawania jest zbudowanie algorytmu $A$ realizującego odwzoro
 \begin{equation}
  A : D \rightarrow I \cup \{i_{\emptyset}\}
 \end{equation}
-który przypisuje do każdego elementu zbioru $D$ etykietę (numer klasy) należącą do zbioru $I \cup \{i_{\emptyset}\}$, gdzie $i_{\emptyset}$ jest odpowiedzią ,,nie wiem''.
-
-Dobry algorytm charakteryzuje się małą liczbą odpowiedzi ,,nie wiem''.
+który przypisuje do każdego elementu zbioru $D$ etykietę (numer klasy) należącą do zbioru $I \cup \{i_{\emptyset}\}$, gdzie $i_{\emptyset}$ jest odpowiedzią ,,nie wiem''. Dobry algorytm charakteryzuje się małą liczbą odpowiedzi ,,nie wiem''.
 
 Dopuszczalny jest wariant, w którym identyfikujemy czy obiekt należy do sumy niektórych podzbiorów, np. $p \in D_1 \cup D_2$
 
@@ -62,9 +60,8 @@ Odwzorowanie $A$ jest realizowane jako złożenie trzech odwzorowań
 \end{enumerate}
 
 \section{Recepcja cech. Zasada Brawermanna.}
-Recepcja jest to arbitralne przypisane obiektowi zestawu cech w postaci wektora $X = [x_1, x_2, x_3, \ldots, x_L]$, $X \in R^L$, gdzie $L$ jest liczbą parametrów.
+Recepcja jest to arbitralne przypisane obiektowi zestawu cech w postaci wektora $X = [x_1, x_2, x_3, \ldots, x_L]$, $X \in R^L$, gdzie $L$ jest liczbą parametrów. \ref{fig:brawermann}
 
-\ref{fig:brawermann}
 \begin{figure}[ht]
   \centering
   \includegraphics[width=\textwidth]{brawermann.pdf}
@@ -77,9 +74,9 @@ Każda zmienna wektora może być zmienną liczbową lub jakościową. Trudnoś�
 Przy wyborze przestrzeni cech nalęzy kierować się zasadą Brawermanna, która mówi, że obiekty jednej klasy powinny w przestrzeni cech tworzyć skupiska możliwie maksymalnie zwarte wewnętrznie i możliwie najbardziej oddalone od podobnych skupisk dla innych klas.
 
 \section{Odwzorowanie: funkcja przynależności.}
-Realizacja odwzorowania $C$ polega na określeniu wartości podobieństwa pomiędzy rozpoznawanym obiektem $\overrightarrow{a}$ $(\overrightarrow{a} \in R^L)$ i obiektami z klasy $D_i: c^i(\overrightarrow{a})$. Dla obiektu $\overrightarrow{a}$ określamy jego podobieństwo do klasy $D_i = 1, 2, \ldots, I$
+Realizacja odwzorowania $C$ polega na określeniu wartości podobieństwa pomiędzy rozpoznawanym obiektem $\overrightarrow{a}$ $(\overrightarrow{a} \in R^L)$ i obiektami z klasy $D_i: C^i(\overrightarrow{a})$. Dla obiektu $\overrightarrow{a}$ określamy jego podobieństwo do klasy $D_i = 1, 2, \ldots, I$
 
-$c^i(\overrightarrow{a})$ zależy od stosowanej metody.
+$C^i(\overrightarrow{a})$ zależy od stosowanej metody.
 
 \section{Odwzorowanie: podejmowanie decyzji.}
 Podejmowanie decyzji realizujemy na podstawie wartości funkcji przynależności. W najprostszym przypadku $\overrightarrow{a}$ przypisujemy do tej klasy, dla której mamy dominującą wartość funkcji przynależności. Przy podejmowaniu decyzji warto zadbać, aby wartość maksymalna funkcji przynależności miała charakter naprawdę maksymalny:
@@ -105,7 +102,7 @@ Ogólny schemat rozpoznawania: \ref{fig:recognition}
 
 W ogólnym przypadku rozpoznawanie jest procesem iteracyjnym.
 
-\section{Metody minimalnie odległościowe. Wybór metryki.}
+\section{Metody minimalnoodległościowe. Wybór metryki.}
 Wybór właściwej metryki musi być dopasowany do zasady Brawermana i zwykle realizowany jest empirycznie metodą prób i błędów albo całkowicie arbitralnie.
 
 Definicja:
@@ -152,7 +149,7 @@ Istotną wadą metody NN jest przypadek, kiedy jeden z elementów istniejących 
 \item Szukamy odległości pomiędzy obiektem $\overrightarrow{a}$, a wszystkimi elementami wszystkich klas $\varphi(\overrightarrow{a},\overrightarrow{x^{i,k}})=dm$ gdzie $k = 1, 2, \ldots, L$; $i = 1,2, \ldots, I_k$; $L$ – liczba klas, $I_k$ – liczba elementów $k$-tej klasy, $m=1,2,\ldots,|D|$
 \item Sortujemy $dm$ w porządku niemalejącym. Otrzymujemy $rm$, $m = 1,2,\ldots, |D|$
 \item Wybieramy $\alpha$ pierwszych elementów ciągu $rm$
-\item Obiekt $\overrightarrow{a}$ klasyfikujemy do klasy przedstawicieli której jest najwięcej w wybranych w kroku 3
+\item Obiekt $\overrightarrow{a}$ klasyfikujemy do klasy przedstawicieli której jest najwięcej wybranych w kroku 3
 \end{enumerate}
 
 \section{Metoda jnNN. Relacja pomiędzy metodami $\alpha$NN i jnNN.}
@@ -167,6 +164,7 @@ Metoda ta opiera się na opracowaniu wzorca dla każdej klasy. W najprostszym pr
  0 & \mbox{gdy }\overrightarrow{a} \neq \{w_i\}
 \end{cases}
 \end{equation}
+
 $\overrightarrow{a}$ - nowy obiekt
 
 $w_i$ - wzorzec klasy $i$-tej
